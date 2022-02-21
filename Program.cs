@@ -6,7 +6,7 @@ namespace mis321_pa2_ectew1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
