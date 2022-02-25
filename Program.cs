@@ -1,4 +1,5 @@
-﻿using System;
+﻿//using Internal;
+using System;
 using mis321_pa2_ectew1.Interfaces;
 
 namespace mis321_pa2_ectew1
@@ -7,51 +8,97 @@ namespace mis321_pa2_ectew1
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("\nWelcome to the World's End Battle Game... Let the games begin!");
+            System.Console.WriteLine("\nWelcome to the World's End Battle Game...");
             
-            PlayWith2();
+            // Character jack = new JackSparrow();
+            // Character davy = new DavyJones();
+            // Character will = new WillTurner();
 
-            //generating all of the the random numbers needed & then passing them into the new Character object
+            Character player1 = new Character();
+            Character player2 = new Character();
+
+            player1 = SetUpPlayer(player1); //setting up player 1
+
+            player2 = SetUpPlayer(player2); //setting up player 2
+
+            System.Console.WriteLine("Let the battle begin!");
+
+            Console.ReadKey();
+            System.Console.WriteLine($"\nCharacter: {player1.CharacterName}\nMaxPower: {player1.MaxPower}\nHealth: {player1.Health}\nAttackStrength: {player1.AttackStrength}\nDefensivePower: {player1.DefensivePower}\nAttackBehavior: {player1.attackBehavior}");
+            System.Console.WriteLine($"\nCharacter: {player2.CharacterName}\nMaxPower: {player2.MaxPower}\nHealth: {player2.Health}\nAttackStrength: {player2.AttackStrength}\nDefensivePower: {player2.DefensivePower}\nAttackBehavior: {player2.attackBehavior}");
+            Console.ReadKey();
+        }
+
+        static Character SetUpPlayer(Character temp)
+        {
+            System.Console.WriteLine("\nEnter the player's name.");
+            string playerName = Console.ReadLine();
+            Menu menuChoice = new Menu();
+            int characterUC = menuChoice.GetCharacterUC();
+            Player newPlayer = new Player(){PlayerName = playerName};
+
             Random randomNum = new Random();
-            int randomMaxPower = randomNum.Next(1,101);
-            Character newCharacter = new Character(){Name = player1Character, MaxPower = Character.GetMaxPower(), Health = 100, AttackStrength = Character.GetAttackStrength(MaxPower), DefensivePower = Character.GetDefensivePower(newCharacter.MaxPower)};
-
-            //checking myself...
-            System.Console.WriteLine($"{newCharacter.Name}\n{newCharacter.MaxPower}\n{newCharacter.Health}\n{newCharacter.AttackStrength}\n{newCharacter.DefensivePower}");
+            int randomMaxPower = Character.GetMaxPower();
 
             switch(characterUC)
             {
                 case 1:
-                    IAttack jack = new DistractBehavior();
+                    temp = new JackSparrow(){CharacterName = "Jack Sparrow", MaxPower = randomMaxPower, Health = 100, AttackStrength = Character.GetAttackStrength(randomMaxPower), DefensivePower = Character.GetDefensivePower(randomMaxPower)};
                     break;
                 case 2:
-                    IAttack davy = new CannonBehavior();
+                    temp = new DavyJones(){CharacterName = "Davy Jones", MaxPower = randomMaxPower, Health = 100, AttackStrength = Character.GetAttackStrength(randomMaxPower), DefensivePower = Character.GetDefensivePower(randomMaxPower)};
                     break;
                 case 3:
-                    IAttack will = new SwordBehavior();
+                    temp = new WillTurner(){CharacterName = "Will Turner", MaxPower = randomMaxPower, Health = 100, AttackStrength = Character.GetAttackStrength(randomMaxPower), DefensivePower = Character.GetDefensivePower(randomMaxPower)};
                     break;
             }
+            return temp;
+
         }
 
-        static void PlayWith2()
-        {
-            Menu menuChoice = new Menu();
-            int characterUC = menuChoice.GetCharacterUC();
-            System.Console.WriteLine("First, please enter player 1's name.");
-            string player1 = Console.ReadLine();
-            int player1Character = menuChoice.GetCharacterUC();
-            ConvertCharacterChoice(player1Character);
-            MakeCharacter();
+        // static void MakeCharacter(int characterUC, Character temp)
+        // {
+        //     //Character temp = new Character();
 
-            System.Console.WriteLine("Enter player 2's name.");
-            string player2 = Console.ReadLine();
-            int player2Character = menuChoice.GetCharacterUC();
-        }
+        //     Random randomNum = new Random();
+        //     int randomMaxPower = randomNum.Next(1,101);
+        //     int randomAttackStrength = randomNum.Next(1, randomMaxPower);
+        //     int randomDefensivePower = randomNum.Next(1, randomMaxPower);
+        //     //to check myself...
+        //     //System.Console.WriteLine($"{randomMaxPower}\t{randomAttackStrength}\t{randomDefensivePower}");
 
-        static void MakeCharacter()
-        {
-            Character newCharacter = new Character();
-            //newCharacter.Name = 
-        }
+
+        //     switch(characterUC)
+        //     {
+        //         case 1:
+        //             temp = MakeAJackSparrow(temp, randomMaxPower, randomAttackStrength, randomDefensivePower);
+        //             break;
+        //         case 2:
+        //             temp = MakeADavyJones(randomMaxPower, randomAttackStrength, randomDefensivePower);
+        //             break;
+        //         case 3:
+        //             temp = MakeAWillTurner(randomMaxPower, randomAttackStrength, randomDefensivePower);
+        //             break;
+        //     }
+        // }
+
+        // public static Character MakeAJackSparrow(Character temp, int randomMaxPower, int randomAttackStrength, int randomDefensivePower)
+        // {
+        //     Character newCharacter = new Character(){CharacterName = "Jack Sparrow", MaxPower = randomMaxPower, Health = 100, AttackStrength = randomAttackStrength, DefensivePower = randomDefensivePower};
+        //     //temp.SetAttackBehavior(new JackSparrow());
+        //     return newCharacter;
+        // }
+
+        // public static Character MakeADavyJones(int randomMaxPower, int randomAttackStrength, int randomDefensivePower)
+        // {
+        //     Character newCharacter = new DavyJones(){CharacterName = "Davy Jones", MaxPower = randomMaxPower, Health = 100, AttackStrength = randomAttackStrength, DefensivePower = randomDefensivePower};
+        //     return newCharacter;
+        // }
+
+        // public static Character MakeAWillTurner(int randomMaxPower, int randomAttackStrength, int randomDefensivePower)
+        // {
+        //     Character newCharacter = new WillTurner(){CharacterName = "Will Turner", MaxPower = randomMaxPower, Health = 100, AttackStrength = randomAttackStrength, DefensivePower = randomDefensivePower};
+        //     return newCharacter;
+        // }
     }
 }

@@ -5,7 +5,7 @@ namespace mis321_pa2_ectew1
 {
     public class Character
     {
-        public string Name {get;set;}
+        public string CharacterName {get;set;}
         public int MaxPower {get;set;}
         public int Health {get;set;}
         public int AttackStrength {get;set;}

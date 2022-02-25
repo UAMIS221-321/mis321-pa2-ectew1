@@ -1,8 +1,9 @@
 namespace mis321_pa2_ectew1
 {
-    public class Player
+    public class Player : Character
     {
-        public string Name {get;set;}
-        public Character character {get;set;}
+        public string PlayerName {get;set;}
+        
+        //public string Character {get;set;}
     }
 }
