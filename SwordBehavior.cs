@@ -6,7 +6,7 @@ namespace mis321_pa2_ectew1
     {
         public void Attack()
         {
-            
+            System.Console.WriteLine("Arg! I attacked you with my sword!");
         }
     }
 }

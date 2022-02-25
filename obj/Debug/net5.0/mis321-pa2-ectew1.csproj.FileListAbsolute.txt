@@ -1,0 +1,15 @@
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/obj/Debug/net5.0/mis321-pa2-ectew1.csproj.AssemblyReference.cache
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/obj/Debug/net5.0/mis321-pa2-ectew1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/obj/Debug/net5.0/mis321-pa2-ectew1.AssemblyInfoInputs.cache
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/obj/Debug/net5.0/mis321-pa2-ectew1.AssemblyInfo.cs
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/obj/Debug/net5.0/mis321-pa2-ectew1.csproj.CoreCompileInputs.cache
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/bin/Debug/net5.0/mis321-pa2-ectew1.deps.json
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/bin/Debug/net5.0/mis321-pa2-ectew1.runtimeconfig.json
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/bin/Debug/net5.0/mis321-pa2-ectew1.runtimeconfig.dev.json
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/bin/Debug/net5.0/mis321-pa2-ectew1.dll
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/bin/Debug/net5.0/ref/mis321-pa2-ectew1.dll
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/bin/Debug/net5.0/mis321-pa2-ectew1.pdb
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/obj/Debug/net5.0/mis321-pa2-ectew1.dll
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/obj/Debug/net5.0/ref/mis321-pa2-ectew1.dll
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/obj/Debug/net5.0/mis321-pa2-ectew1.pdb
+/Users/ellietew/Documents/MIS/repos/Spring22/mis321-pa2-ectew1/obj/Debug/net5.0/mis321-pa2-ectew1.genruntimeconfig.cache

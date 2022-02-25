@@ -1,3 +1,4 @@
+using System;
 using mis321_pa2_ectew1.Interfaces;
 
 namespace mis321_pa2_ectew1
@@ -25,6 +26,27 @@ namespace mis321_pa2_ectew1
         public void SetDefendBehavior(IDefend defendBehavior)
         {
             this.defendBehavior = defendBehavior;
+        }
+
+        public static int GetMaxPower()
+        {
+            Random randomNum = new Random();
+            int randomMaxPower = randomNum.Next(1,101);
+            return randomMaxPower;
+        }
+
+        public static int GetAttackStrength(int MaxPower)
+        {
+            Random randomNum = new Random();
+            int randomAttackStrength = randomNum.Next(1, MaxPower);
+            return randomAttackStrength;
+        }
+
+        public static int GetDefensivePower(int MaxPower)
+        {
+            Random randomNum = new Random();
+            int randomDefensivePower = randomNum.Next(1, MaxPower);
+            return randomDefensivePower;
         }
 
     }
