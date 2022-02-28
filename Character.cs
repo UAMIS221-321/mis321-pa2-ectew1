@@ -5,9 +5,10 @@ namespace mis321_pa2_ectew1
 {
     public class Character
     {
+        public string PlayerName {get;set;}
         public string CharacterName {get;set;}
         public int MaxPower {get;set;}
-        public int Health {get;set;}
+        public double Health {get;set;}
         public int AttackStrength {get;set;}
         public int DefensivePower {get;set;}
         public IAttack attackBehavior {get;set;}
@@ -31,22 +32,22 @@ namespace mis321_pa2_ectew1
         public static int GetMaxPower()
         {
             Random randomNum = new Random();
-            int randomMaxPower = randomNum.Next(1,101);
-            return randomMaxPower;
+            int randomMP = randomNum.Next(1,101);
+            return randomMP;
         }
 
         public static int GetAttackStrength(int MaxPower)
         {
             Random randomNum = new Random();
-            int randomAttackStrength = randomNum.Next(1, MaxPower);
-            return randomAttackStrength;
+            int randomAS = randomNum.Next(1, MaxPower);
+            return randomAS;
         }
 
         public static int GetDefensivePower(int MaxPower)
         {
             Random randomNum = new Random();
-            int randomDefensivePower = randomNum.Next(1, MaxPower);
-            return randomDefensivePower;
+            int randomDP = randomNum.Next(1, MaxPower);
+            return randomDP;
         }
 
     }

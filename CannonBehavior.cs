@@ -6,7 +6,7 @@ namespace mis321_pa2_ectew1
     {
         public void Attack()
         {
-            System.Console.WriteLine("Watch out for the Cannon Fire!");
+            System.Console.WriteLine("\nHere comes Davy Jones' Cannon Fire!");
         }
     }
 }
