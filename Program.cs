@@ -18,12 +18,13 @@ namespace mis321_pa2_ectew1
             player2 = SetUpPlayer(); //setting up player 2
 
             //to check myself...
+            System.Console.WriteLine("\nHere are the players' starting stats...");
             System.Console.WriteLine($"\nPlayer: {player1.PlayerName}\nCharacter: {player1.CharacterName}\nMaxPower: {player1.MaxPower}\nHealth: {player1.Health}\nAttackStrength: {player1.AttackStrength}\nDefensivePower: {player1.DefensivePower}\nAttackBehavior: {player1.attackBehavior}");
             System.Console.WriteLine($"\nPlayer: {player2.PlayerName}\nCharacter: {player2.CharacterName}\nMaxPower: {player2.MaxPower}\nHealth: {player2.Health}\nAttackStrength: {player2.AttackStrength}\nDefensivePower: {player2.DefensivePower}\nAttackBehavior: {player2.attackBehavior}");
             
-            Console.ReadKey();
             bool p1First = GetFirstTurn();
-            System.Console.WriteLine("Let the battle begin!");
+            System.Console.WriteLine("\nLet the battle begin!");
+            System.Threading.Thread.Sleep(2000);
             GamePlay(p1First, player1, player2);
             DisplayWinner(player1, player2);
         }
@@ -89,13 +90,13 @@ namespace mis321_pa2_ectew1
             //continous loop for game play until one player runs out of health
             while((player1.Health > 0) && (player2.Health > 0))
             {
+                System.Threading.Thread.Sleep(2000);
                 if(p1First == true)
                 {
                     player1.attackBehavior.Attack();
                     //player2.defendBehavior.Defend();
                     DamageControl(p1First, player1, player2);
                     p1First = false; //to let player2 go first next time
-                    System.Console.WriteLine("\nNow, it's Player 2's turn to attack...");
                 }
                 else
                 {
@@ -103,7 +104,6 @@ namespace mis321_pa2_ectew1
                     //player1.defendBehavior.Defend();
                     DamageControl(p1First, player1, player2);
                     p1First = true; //to let player1 go first next time
-                    System.Console.WriteLine("\nNow, it's Player 1's turn to attack...");
                 }
                 //re-setting the players' attack strength & defensive power for each turn, but max power for whole round stays the same
                 player1.AttackStrength = Character.GetAttackStrength(player1.MaxPower);

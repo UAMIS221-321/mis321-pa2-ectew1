@@ -12,7 +12,7 @@ namespace mis321_pa2_ectew1
         public int AttackStrength {get;set;}
         public int DefensivePower {get;set;}
         public IAttack attackBehavior {get;set;}
-        public IDefend defendBehavior {get;set;}
+        //public IDefend defendBehavior {get;set;}
 
         public Character()
         {
@@ -24,10 +24,10 @@ namespace mis321_pa2_ectew1
             this.attackBehavior = attackBehavior;
         }
 
-        public void SetDefendBehavior(IDefend defendBehavior)
-        {
-            this.defendBehavior = defendBehavior;
-        }
+        // public void SetDefendBehavior(IDefend defendBehavior)
+        // {
+        //     this.defendBehavior = defendBehavior;
+        // }
 
         public static int GetMaxPower()
         {
